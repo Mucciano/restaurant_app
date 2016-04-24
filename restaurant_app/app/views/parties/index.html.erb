@@ -1,0 +1,15 @@
+<h1>Current Parties</h1>
+
+<%= link_to "Take a Party's Order", new_order_path %>
+
+<% @parties.each do |party| %>
+<% order = @orders.where party_id: party.id %>
+<p>Reservation Name: <%= party.reservation_name %></p>
+<p>Size: <%= party.size %></p>
+<p>Table Number: <%= party.table %></p>
+<h4>Party's current Order:</h4>
+  <% order.each do |o| %>
+  <p><%= link_to(o.item.name, order_path(o.id)) %></p>
+    <% end %>
+
+<% end %>

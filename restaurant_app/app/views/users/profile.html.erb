@@ -1,0 +1,17 @@
+<h1>Welcome Back <%= @user.username %></h1>
+
+<h2>Today's Menu</h2>
+<% @items.each do |item| %>
+<h3><%= link_to(item.name, item_path(item.id))%> </h3>
+<h3>Price: <%= item.price %> </h3>
+<h4>dietary restriction: <%= item.dietary_rest %></h4>
+<% end %>
+
+
+<%= link_to "New Menu Item", new_item_path %>
+
+<%= link_to "See Active Parties", parties_path %>
+
+<%= button_to "New Party", new_party_path, method: :get %>
+
+<%= button_to "Log Out", deletion_station_path, method: :delete %>
