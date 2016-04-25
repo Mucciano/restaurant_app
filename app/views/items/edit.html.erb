@@ -1,0 +1,20 @@
+<div class="twelve columns itemupdate">
+
+<h1>Update Menu Item</h1>
+<%= form_for @item do |f| %>
+  <div class="offname">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+
+  <%= f.label :dietary_rest %>
+  <%= f.text_field :dietary_rest %>
+  <br>
+  <%= f.submit %>
+<input type="button" name="name" value="off the menu" class ="offmenu">
+<%= button_to "Delete Item", item_path(@item.id), method: :delete %>
+<% end %>
+</div>

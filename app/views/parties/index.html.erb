@@ -1,0 +1,25 @@
+<div class="currentparties">
+<h1 class="four columns current">Current Parties</h1>
+</div>
+
+
+<h3 class= "six columns takeorder"><%= link_to "Take a Party's Order", new_order_path %></h3>
+
+
+<% @parties.each do |party| %>
+<div class="five columns party">
+<% order = @orders.where party_id: party.id %>
+<h4>Reservation Name: <%= link_to(party.reservation_name, party_path(party.id)) %></h4>
+<h5>Size: <%= party.size %></h5>
+<h5>Table Number: <%= party.table %></h5>
+  <div class="bill">
+<p>Party's current Bill:</p>
+  <% arr = [] %>
+  <% order.each do |o| %>
+  <% arr.push(o.item.price.to_i) %>
+  <p><%= link_to(o.item.name, order_path(o.id)) %> $<%= o.item.price%></p>
+    <% end %>
+  <p>Total:$<%= arr.sum %>.00</p>
+  </div>
+</div>
+<% end %>

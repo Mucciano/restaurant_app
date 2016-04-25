@@ -1,0 +1,23 @@
+<%= button_to "Create New User", new_user_path, method: :get %>
+
+<div class="twelve columns banner">
+  <h1>Welcome to Nicky's Eats!</h1>
+</div>
+
+
+<div class="twelve columns login">
+
+<h1>Log In Here</h1>
+<%= form_tag '/sessions', method: :post do %>
+
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+<br>
+  <%= submit_tag "Log In" %>
+
+<% end %>
+
+</div>

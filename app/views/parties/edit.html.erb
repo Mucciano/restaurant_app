@@ -1,0 +1,18 @@
+
+<div class="twelve columns editparty">
+
+<h1>Edit this Party</h1>
+<%= form_for @party do |f| %>
+  <%= f.label :table %>
+  <%= f.text_field :table %>
+
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+
+  <%= f.label :reservation_name %>
+  <%= f.text_field :reservation_name %>
+  <br>
+  <%= f.submit %>
+<% end %>
+<%= button_to "DELETE", party_path(@party), method: :delete %>
+</div>

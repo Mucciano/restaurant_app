@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/tileable_wood_texture.png");
+}
+
+.party {
+
+  text-align: center;
+  width: 30%;
+  height: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 5%;
+  background-color: rgba(24, 138, 237, 0.5);
+  border-radius: 1em;
+
+}
+
+
+
+.party:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.takeorder{
+  margin-left: 7%;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.current {
+  color: darkred;
+}
+
+.menu {
+margin-left: 12%;
+background-color: rgba(24, 138, 237, 0.5);
+border-radius: 1.5em;
+margin-bottom: 10%;
+}
+
+.menu:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu2{
+  text-align: center;
+}
+
+.welcome {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.today {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.buttons {
+display: inline-flex;
+
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.login {
+  text-align: center;
+}
+
+.partyorder{
+  text-align: center;
+}
+
+.newitem{
+  text-align: center;
+}
+
+.itemupdate{
+  text-align: center;
+}
+
+.editparty{
+  text-align: center;
+}
+
+.itemshow{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.admenu {
+  text-align: center;
+}
+
+.banner{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.orderedit{
+  text-align: center;
+}
+
+.ordershow{
+  text-align: center;
+}
+
+.currentparties{
+  font-family: 'Permanent Marker', cursive;
+}
+
+.newparty{
+  text-align: center;
+}
+
+.newuser {
+  text-align: center;
+}
+
+.partyshow{
+  text-align: center;
+}
+
+.homepage{
+  margin-bottom: -2em;
+}
+
+.bill{
+  background-color: rgba(250, 80, 80, 0.5);
+
+}

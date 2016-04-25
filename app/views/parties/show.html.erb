@@ -1,0 +1,10 @@
+
+<div class="twelve columns partyshow">
+
+
+<h1>Reservation Name: <%= @party[:reservation_name] %></h1>
+<h2>Party Size: <%= @party[:size] %></h2>
+<h3>Table: <%= @party[:table] %></h3>
+
+<%= button_to "Edit Party", edit_party_path(@party), method: :get %>
+</div>

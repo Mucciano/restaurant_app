@@ -1,0 +1,13 @@
+
+<div class="twelve columns itemshow">
+  <h1><%=@item[:name]%></h1>
+  <h2><%=@item[:price]%></h2>
+  <h3>Dietary Restriction: <%=@item[:dietary_rest]%></h3>
+</div>
+<% if @user.username == "Admin" then %>
+<div class="twelve columns admenu">
+<%= button_to "Edit Menu Item", edit_item_path(@item.id), method: :get %>
+</div>
+<% end %>
+
+</div>

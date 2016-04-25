@@ -1,0 +1,11 @@
+<div class="twelve colummns orderedit">
+  <%= form_for @order do |f| %>
+
+  <%= f.label :item %>
+  <%= f.select( :item_id, options_for_select(@item.map {|item| [item.name, item.id ]}) ) %>
+  <br>
+  <%= f.submit %>
+
+  <% end %>
+  <%= button_to "DELETE", order_path(@order), method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+
+<div class="twelve columns ordershow">
+
+  <h1><%= @order.item.name %></h1>
+  <h2>Going to the <%= @order.party.reservation_name %> party</h2>
+  <h3>at table #<%= @order.party.table %></h3>
+
+  <%= button_to "Edit Order Item", edit_order_path(@order.id), method: :get %>
+
+</div>

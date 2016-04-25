@@ -1,0 +1,21 @@
+<div class="twelve columns buttons">
+  <%= button_to "See Active Parties", parties_path, method: :get %>
+  <%= button_to "New Party", new_party_path, method: :get %>
+  <%= button_to "Log Out", deletion_station_path, method: :delete %>
+</div>
+<% if @user.username == "Admin" then %>
+<div class="twelve columns admenu">
+<%= button_to "New Menu Item", new_item_path, method: :get %>
+</div>
+<% end %>
+
+<h1 class="twelve columns welcome">Welcome Back <%= @user.username %></h1>
+
+<h2 class="twelve columns today">Today's Menu</h2>
+<% @items.each do |item| %>
+<div class="four columns menu">
+<h3 class="menu2"><%= link_to(item.name, item_path(item.id))%> </h3>
+<h4>Price: $<%= item.price %> </h3>
+<h5>dietary restriction: <%= item.dietary_rest %></h4>
+</div>
+<% end %>
